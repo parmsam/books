@@ -14,6 +14,7 @@
   overflow: scroll;
   // Again, this is where the magic happens
   -webkit-overflow-scrolling: touch;
+  border-radius: 9px;
 }
 .avatar {
   max-width: 150px;
