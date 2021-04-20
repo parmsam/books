@@ -1,7 +1,7 @@
 //declare fields and item html format for list
 var options = {
-  valueNames: [ 'title', 'author', 'status'],
-  item: '<li><h3 class="title"></h3><p class="author"></p><i class="status"></i></li>'
+  valueNames: [ 'title', 'author', 'status', 'genre'],
+  item: '<li><h3 class="title"></h3><p class="author"></p><i class="status"></i> - <i class="genre"></i></li>'
 };
 //using d3 asynch request to get csv data
 var url = "https://raw.githubusercontent.com/parmsam/books/main/Book%20Reading%20List%20-%20Public_list.csv";
@@ -14,7 +14,8 @@ d3.csv(url, function(data) {
     return {
     title : d.title,
     author : d.author,
-    status : d.status
+    status : d.status,
+    genre: d.genre
     }
   });
   //console.log(csv_data);
