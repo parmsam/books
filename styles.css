@@ -2,12 +2,15 @@
   font-family:sans-serif;
   margin:0;
   padding:15px 5px 0;
+  width: 20rem;
 }
 .list > li {
   display:block;
   background-color: #F8F8F8;
+  /* background-color: #fdf8f7; */
     padding:17px;
   box-shadow: inset 0 5px 0 #fff;
+  width: 5px 20px;
   overflow: scroll;
   // Again, this is where the magic happens
   -webkit-overflow-scrolling: touch;
