@@ -12,7 +12,7 @@ d3.csv(url2, function(data) {
   //code here
   var csv_data =[];
   //specify fields of interest
-  csv_data = data.map(function(error, d) {
+  csv_data = data.map(function(d) {
     return {
     title : d.title,
     author : d.author,
