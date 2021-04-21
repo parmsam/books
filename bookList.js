@@ -5,12 +5,14 @@ var options = {
 };
 //using d3 asynch request to get csv data
 var url = "https://raw.githubusercontent.com/parmsam/books/main/Book%20Reading%20List%20-%20Public_list.csv";
+var url2 = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRQfvo5W-6v57Wzr4enusjaxsOjq-2Tdn35Grza87NrPTRfG_DtVlHn7feUn2j0bh1n83ABBiv3sV87/pub?gid=863488693&single=true&output=csv";
 
-d3.csv(url, function(data) {
+// console.log(data);
+d3.csv(url2, function(data) {
   //code here
   var csv_data =[];
   //specify fields of interest
-  csv_data = data.map(function(d) {
+  csv_data = data.map(function(error, d) {
     return {
     title : d.title,
     author : d.author,
