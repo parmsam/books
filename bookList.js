@@ -1,7 +1,7 @@
 //declare fields and item html format for list
 var options = {
-  valueNames: [ 'title', 'author', 'status', 'genre'],
-  item: '<li><h3 class="title"></h3><p class="author"></p><i class="status"></i> - <i class="genre"></i></li>'
+  valueNames: [ 'title', 'author', 'status', 'genre', { name: 'link', attr: 'href' }],
+  item: '<li><a href="" class="link"><h3 class="title"></h3></a><p class="author"></p><i class="status"></i> - <i class="genre"></i></li>'
 };
 //using d3 asynch request to get csv data
 var url = "https://raw.githubusercontent.com/parmsam/books/main/Book%20Reading%20List%20-%20Public_list.csv";
@@ -17,7 +17,8 @@ d3.csv(url2, function(data) {
     title : d.title,
     author : d.author,
     status : d.status,
-    genre: d.genre
+    genre: d.genre,
+    link: d.link
     }
   });
   //console.log(csv_data);
@@ -29,23 +30,31 @@ d3.csv(url2, function(data) {
 // var values = [{
 //     title: '4-Hour Workweek',
 //     author: 'Tim Ferris',
-//     status: 'currently reading'
+//     status: 'currently reading',
+//     genre:"test1",
+//     link: 'https://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357'
 //   },
 //   {
 //     title: 'Extreme Ownership',
 //     author: 'Jocko Willink',
-//     status: 'finished reading'
+//     status: 'finished reading',
+//     genre:"test2",
+//     link: 'https://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357'
 //   },
 //   {
 //     title: 'Test2',
 //     author: 'Tom King',
-//     status: 'finished reading'
+//     status: 'finished reading',
+//     genre:"test1",
+//     link: 'https://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357'
 // }];
 
 // var userList = new List('users', options, values);
-
+//
 // userList.add({
 //   title: "Gustaf Lindqvist",
 //   author: 'Dale Carnegie',
 //   status: 'finished reading',
+//     genre:"test2",
+//   link: 'https://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357'
 // });
