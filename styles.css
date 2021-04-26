@@ -11,7 +11,7 @@
     padding:17px;
   box-shadow: inset 0 5px 0 #fff;
   width: 5px 20px;
-  overflow: scroll;
+/*   overflow: scroll; */
   // Again, this is where the magic happens
   -webkit-overflow-scrolling: touch;
   border-radius: 9px;
